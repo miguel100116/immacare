@@ -432,7 +432,120 @@ contactNumberService: {
   fontWeight: 'bold',
   marginTop: 4,
 },
+
+
+//doctors css
+doctorsContainer: {
+  flex: 1,
+  backgroundColor: '#EEECDE',
+},
+doctorsContentContainer: {
+  padding: 20,
+},
+doctorsSectionTitle: {
+  fontSize: 28,
+  fontWeight: 'bold',
+  color: '#1e3a8a',
+  textAlign: 'center',
+  marginBottom: 20,
+},
+doctorsFiltersContainer: {
+  marginBottom: 20,
+},
+doctorsDropdownFilterContainer: {
+  marginBottom: 12,
+},
+doctorsDropdownButton: {
+  backgroundColor: '#1e3a8a',
+  padding: 14,
+  borderRadius: 16,
+  flexDirection: 'row',
+  justifyContent: 'space-between',
+  alignItems: 'center',
+},
+doctorsDropdownButtonText: {
+  color: '#fff',
+  fontSize: 16,
+},
+dropdownOptions: {
+  backgroundColor: '#e0e7ff',
+  borderRadius: 12,
+  marginTop: 5,
+  padding: 10,
+},
+dropdownOption: {
+  paddingVertical: 8,
+},
+seeAllButton: {
+  backgroundColor: '#2563eb',
+  padding: 12,
+  borderRadius: 12,
+  marginTop: 10,
+},
+seeAllButtonText: {
+  color: '#fff',
+  fontWeight: 'bold',
+  textAlign: 'center',
+},
+doctorsDoctorCardsContainer: {
+  gap: 20,
+},
+doctorsDoctorCard: {
+  backgroundColor: '#1e3a8a',
+  padding: 20,
+  borderRadius: 20,
+  flexDirection: 'row',
+  alignItems: 'center',
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 2 },
+  shadowOpacity: 0.2,
+  shadowRadius: 4,
+  elevation: 5,
+},
+doctorsDoctorIcon: {
+  width: 80,
+  height: 80,
+  borderRadius: 40,
+  backgroundColor: '#e0e7ff',
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginRight: 16,
+},
+doctorsDoctorDetails: {
+  flex: 1,
+},
+doctorsDoctorName: {
+  color: '#fff',
+  fontSize: 20,
+  fontWeight: 'bold',
+},
+doctorsDoctorSpecialization: {
+  color: '#d1d5db',
+  fontSize: 16,
+  marginVertical: 4,
+},
+doctorsDoctorAvailability: {
+  color: '#d1d5db',
+  fontSize: 14,
+},
+doctorsDoctorType: {
+  color: '#d1d5db',
+  fontSize: 14,
+  marginBottom: 10,
+},
+doctorsAppointmentButton: {
+  backgroundColor: '#f8f5f0',
+  paddingVertical: 10,
+  paddingHorizontal: 16,
+  borderRadius: 10,
+},
+doctorsAppointmentButtonText: {
+  color: '#1e3a8a',
+  fontWeight: 'bold',
+  textAlign: 'center',
+},
 });
+
 
 
 

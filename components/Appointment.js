@@ -14,6 +14,7 @@ const HomeScreen = () => {
     navigation.navigate("Appointment");
     navigation.navigate("Login");
     navigation.navigate("Service");
+    navigation.navigate("Doctors");
   };
 
   return (
@@ -51,7 +52,7 @@ const HomeScreen = () => {
 
         {/* Buttons Section */}
         <View style={Mystyle.buttonContainer}>
-          <TouchableOpacity style={Mystyle.button}>
+          <TouchableOpacity style={Mystyle.button} onPress={() => navigation.navigate("Doctors")} >
             <Icon name="stethoscope" size={20} color="white" />
             <Text style={Mystyle.buttonText}> Find a Doctor</Text>
           </TouchableOpacity>
@@ -122,7 +123,7 @@ const HomeScreen = () => {
             style={Mystyle.sideNavItem}
             onPress={() => {
               setIsSideNavOpen(false);
-              // navigation.navigate("Meet Doctors");
+              navigation.navigate("Doctors");
             }}
           >
             <Icon name="stethoscope" size={20} color="white" />

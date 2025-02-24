@@ -5,12 +5,10 @@
 // import { Mystyle } from "./Mystyle";
 // import { useNavigation } from "@react-navigation/native";
 
-
-
 // const Service = () => {
-//     // const navigation = useNavigation(); 
+//     // const navigation = useNavigation();
 //     // const goToService = () => {
-//     //     navigation.navigate("Service"); 
+//     //     navigation.navigate("Service");
 //     // }
 
 //   const [expanded, setExpanded] = useState(null);
@@ -71,8 +69,7 @@
 // };
 // export default Service;
 
-
- import React, { useState } from "react";
+import React, { useState } from "react";
 import {View,Text,TouchableOpacity,ScrollView,SafeAreaView,StyleSheet,
 } from "react-native";
 import { Menu, ChevronDown, ArrowLeft } from "lucide-react-native";
@@ -96,12 +93,11 @@ const Service = () => {
       {/* Header */}
       <View style={Mystyle.headerService}>
         {/* Back Button */}
-        <TouchableOpacity onPress={goBack}>
+        <TouchableOpacity  onPress={goBack}>
           <ArrowLeft color="#1e3a8a" size={24} />
         </TouchableOpacity>
         {/* Placeholder for Logo */}
-        <Text style={Mystyle.logoTextService}>ImmaCare+</Text>
-        <Menu color="#1e3a8a" size={24} />
+
       </View>
 
       {/* Content */}

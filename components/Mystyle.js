@@ -154,10 +154,11 @@ export const Mystyle = StyleSheet.create({
   
   logoutButton: {
     marginTop: 30,
+    color:'white',
     padding: 10,
-    backgroundColor: "#FF4444",
     borderRadius: 10,
     alignItems: "center",
+ 
   },
   
   logoutText: {
@@ -175,19 +176,26 @@ export const Mystyle = StyleSheet.create({
   headerProfile: {
     backgroundColor: "#001C5C",
     width: "100%",
-    height: 280,
+    height: 298,
     borderBottomLeftRadius: 50,
     borderBottomRightRadius: 50,
     alignItems: "center",
     justifyContent: "flex-start",
     paddingTop: 50,
   },
+  // backButton: {
+  //   position: "absolute",
+  //   left: 20,
+  //   top: 50,
+  //   marginTop:5,
+  // },
   backButton: {
     position: "absolute",
-    left: 20,
-    top: 50,
-    marginTop:5,
+    top: 20, // Adjust for better vertical alignment
+    left: 20, // Push it to the left corner
+    zIndex:20, // Ensure it's above other elements
   },
+  
   headerText: {
     color: "white",
     fontSize: 20,
@@ -200,6 +208,7 @@ export const Mystyle = StyleSheet.create({
   },
   profileIcon: {
     backgroundColor: "transparent",
+
   },
   form: {
     width: "90%",
@@ -326,7 +335,7 @@ export const Mystyle = StyleSheet.create({
     color: "black",
   },
   registerLinkLoginpage: {
-    color: "green",
+    color: "#001C5C",
     fontWeight: "bold",
   },
 
@@ -424,4 +433,9 @@ contactNumberService: {
   marginTop: 4,
 },
 });
+
+
+
+
+
 

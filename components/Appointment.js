@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image, Alert } from "react-native";
 import { Mystyle } from "./Mystyle";
 import Icon from "react-native-vector-icons/FontAwesome";
 import { Appbar } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
+
 const HomeScreen = () => {
   const [isSideNavOpen, setIsSideNavOpen] = useState(false);
   const navigation = useNavigation();
@@ -17,6 +18,7 @@ const HomeScreen = () => {
 
   return (
     <View style={Mystyle.containerDashbord}>
+   
       {/* Main Content */}
       <View style={{ flex: 1 }}>
         {/* Header with Menu Button */}
@@ -32,6 +34,7 @@ const HomeScreen = () => {
 
         {/* Contact Us Section */}
         <View style={Mystyle.contactContainer}>
+          
           <Text style={Mystyle.contactTitle}>Contact Us</Text>
           <View style={Mystyle.iconContainer}>
             <TouchableOpacity style={Mystyle.contactIcon}>
@@ -53,12 +56,18 @@ const HomeScreen = () => {
             <Text style={Mystyle.buttonText}> Find a Doctor</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={Mystyle.button}>
+          <TouchableOpacity
+            style={Mystyle.button}
+            onPress={() => navigation.navigate("Service")}
+          >
             <Icon name="users" size={20} color="white" />
             <Text style={Mystyle.buttonText}> Find a Service</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={Mystyle.button}>
+          <TouchableOpacity
+            style={Mystyle.button}
+            onPress={() => navigation.navigate("Appointment")}
+          >
             <Icon name="calendar" size={20} color="white" />
             <Text style={Mystyle.buttonText}> Appointment</Text>
           </TouchableOpacity>
@@ -134,11 +143,30 @@ const HomeScreen = () => {
           <TouchableOpacity
             style={Mystyle.logoutButton}
             onPress={() => {
-              alert("Logging out...");
-              navigation.navigate("Login");
+              Alert.alert(
+                "Logout Confirmation",
+                "Are you sure you want to logout?",
+                [
+                  {
+                    text: "Cancel",
+                    style: "cancel",
+                  },
+                  {
+                    text: "OK",
+                    onPress: () => {
+                      setTimeout(() => {
+                        navigation.navigate("Login");
+                      }, 100); // Wait for 2 seconds before navigating
+                    },
+                  },
+                ],
+                { cancelable: false }
+              );
             }}
           >
-            <Text style={Mystyle.logoutButtonText}>Logout</Text>
+            <Text style={{ color: "white", fontWeight: "bold", fontSize: 20 }}>
+              Logout
+            </Text>
           </TouchableOpacity>
         </View>
       )}

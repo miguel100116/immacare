@@ -17,7 +17,7 @@ export default function App() {
 
   return (
     <NavigationContainer>
-    <SNavigation.Navigator initialRouteName="Doctors">
+    <SNavigation.Navigator initialRouteName="Login">
     <SNavigation.Screen options={{ headerShown: false }} name="Login" component={Login} />
     <SNavigation.Screen options={{ headerShown: false }} name="Service" component={Service} />
     <SNavigation.Screen  options={{ headerShown: false }} name="Doctors" component={Doctors}  />
@@ -28,5 +28,7 @@ export default function App() {
     </SNavigation.Navigator>
   </NavigationContainer>
 )}
+
+
 
 

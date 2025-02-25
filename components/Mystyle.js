@@ -249,7 +249,6 @@ export const Mystyle = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     marginBottom: 10,
-    color: 'navy'
   },
   noteSetappointment: {
     fontSize: 12,
@@ -269,8 +268,8 @@ export const Mystyle = StyleSheet.create({
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,
-    backgroundColor: 'white',
     elevation:4,
+    color:"white"
   },
   buttonSetappointment: {
     backgroundColor: 'navy',
@@ -282,6 +281,109 @@ export const Mystyle = StyleSheet.create({
     color: 'white',
     fontWeight: 'bold'
   },
+
+  //kadugtong
+  containerSetappointment: {
+    flex: 1,
+    backgroundColor: "#EEECDE",
+  },
+  appointmentHeader: {
+    padding: 16,
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  appointmentFormContainer: {
+    padding: 20,
+    backgroundColor: "#001C5C",
+    borderRadius: 20,
+    margin: 16,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+  },
+  titleSetappointment: {
+    fontSize: 24,
+    fontWeight: "bold",
+    color: "white",
+    marginBottom: 10,
+  },
+  noteSetappointment: {
+    fontSize: 16,
+    color: "white",
+    marginBottom: 20,
+  },
+  inputSetappointment: {
+    borderWidth: 1,
+    borderColor: "white",
+    borderRadius: 12,
+    padding: 13,
+    marginBottom: 12,
+    color:'white',
+  },
+  buttonSetappointment: {
+    backgroundColor: "#1e3a8a",
+    padding: 15,
+    borderRadius: 12,
+    alignItems: "center",
+    marginTop: 10,
+  },
+  buttonTextSetappointment: {
+    color: "white",
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+  verificationPopupContainer: {
+    backgroundColor: "#1e3a8a",
+    padding: 24,
+    margin: 20,
+    borderRadius: 20,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.3,
+    shadowRadius: 10,
+  },
+  verificationPopupTitle: {
+    color: "#fff",
+    fontSize: 22,
+    fontWeight: "bold",
+    marginBottom: 16,
+  },
+  verificationPopupText: {
+    color: "#fff",
+    fontSize: 16,
+    marginVertical: 4,
+  },
+  verificationNoteText: {
+    color: "#f5f5f5",
+    fontSize: 14,
+    marginTop: 20,
+    textAlign: "center",
+  },
+  verificationModalButtonContainer: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 20,
+    width: "100%",
+  },
+  verificationModalButton: {
+    backgroundColor: "#3b82f6",
+    padding: 12,
+    borderRadius: 12,
+    flex: 1,
+    marginHorizontal: 5,
+    alignItems: "center",
+  },
+  verificationModalButtonText: {
+    color: "#fff",
+    fontWeight: "bold",
+    fontSize: 16,
+  },
+
+
+
   //LOGIN CSS
   containerLoginpage: {
     flex: 1,
@@ -445,7 +547,7 @@ doctorsContentContainer: {
 doctorsSectionTitle: {
   fontSize: 28,
   fontWeight: 'bold',
-  color: '#1e3a8a',
+  color: '#001C5C',
   textAlign: 'center',
   marginBottom: 20,
 },
@@ -456,7 +558,7 @@ doctorsDropdownFilterContainer: {
   marginBottom: 12,
 },
 doctorsDropdownButton: {
-  backgroundColor: '#1e3a8a',
+  backgroundColor: '#001C5C',
   padding: 14,
   borderRadius: 16,
   flexDirection: 'row',
@@ -477,7 +579,7 @@ dropdownOption: {
   paddingVertical: 8,
 },
 seeAllButton: {
-  backgroundColor: '#2563eb',
+  backgroundColor: '#001C5C',
   padding: 12,
   borderRadius: 12,
   marginTop: 10,
@@ -491,7 +593,7 @@ doctorsDoctorCardsContainer: {
   gap: 20,
 },
 doctorsDoctorCard: {
-  backgroundColor: '#1e3a8a',
+  backgroundColor: '#001C5C',
   padding: 20,
   borderRadius: 20,
   flexDirection: 'row',
@@ -544,6 +646,7 @@ doctorsAppointmentButtonText: {
   fontWeight: 'bold',
   textAlign: 'center',
 },
+
 });
 
 

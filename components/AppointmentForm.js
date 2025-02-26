@@ -437,6 +437,8 @@ import { Picker } from "@react-native-picker/picker";
 import { Mystyle } from "./Mystyle";
 import { useNavigation, useRoute } from "@react-navigation/native";
 import { ArrowLeft } from "lucide-react-native";
+import { BlurView } from "expo-blur";
+
 
 const AppointmentForm = () => {
   const navigation = useNavigation();
@@ -511,21 +513,21 @@ const AppointmentForm = () => {
             <TextInput style={Mystyle.inputSetappointment} placeholder="Birthday*" placeholderTextColor="white" onChangeText={(value) => handleChange("birthday", value)} />
             <TextInput style={Mystyle.inputSetappointment} placeholder="Address*" placeholderTextColor="white" onChangeText={(value) => handleChange("address", value)} />
 
-            <Picker selectedValue={form.specialization} onValueChange={(value) => handleChange("specialization", value)} style={Mystyle.inputSetappointment}>
+            <Picker selectedValue={form.specialization} onValueChange={(value) => handleChange("specialization", value)} style={Mystyle.inputSetappointmentdoc}>
               <Picker.Item label="Specialization*" value="" />
               <Picker.Item label="Obstetrics Gynecology" value="Obstetrics Gynecology" />
               <Picker.Item label="Rehabilitation Medicine" value="Rehabilitation Medicine" />
               <Picker.Item label="Cardiology" value="Cardiology" />
             </Picker>
 
-            <Picker selectedValue={form.doctor} onValueChange={(value) => handleChange("doctor", value)} style={Mystyle.inputSetappointment}>
+            <Picker selectedValue={form.doctor} onValueChange={(value) => handleChange("doctor", value)} style={Mystyle.inputSetappointmentdoc}>
               <Picker.Item label="Doctor*" value="" />
               <Picker.Item label="De Guzman, Jat" value="De Guzman, Jat" />
               <Picker.Item label="Alarcon, Mark" value="Alarcon, Mark" />
               <Picker.Item label="Brian, Yvonne" value="Brian, Yvonne" />
             </Picker>
 
-            <TextInput style={Mystyle.inputSetappointment} placeholder="Date*" placeholderTextColor="white" onChangeText={(value) => handleChange("date", value)} />
+            <TextInput style={Mystyle.inputSetappointment} keyboardType="decimal-pad" placeholder="mm/dd/yyyy*" placeholderTextColor="white" onChangeText={(value) => handleChange("date", value)} />
             <TextInput style={Mystyle.inputSetappointment} placeholder="Time*" placeholderTextColor="white" onChangeText={(value) => handleChange("time", value)} />
             <TextInput style={Mystyle.inputSetappointment} placeholder="Reason for Visit*" placeholderTextColor="white" onChangeText={(value) => handleChange("reason", value)} multiline />
 
@@ -538,50 +540,34 @@ const AppointmentForm = () => {
 
       {/* Verification Modal */}
       <Modal transparent visible={isModalVisible} animationType="slide">
-        <View style={Mystyle.verificationPopupContainer}>
-          <Text style={Mystyle.verificationPopupTitle}>Verification</Text>
-          <Text style={Mystyle.verificationPopupText}>Name: {form.name}</Text>
-          <Text style={Mystyle.verificationPopupText}>Phone: {form.phone}</Text>
-          <Text style={Mystyle.verificationPopupText}>Birthday: {form.birthday}</Text>
-          <Text style={Mystyle.verificationPopupText}>Address: {form.address}</Text>
-          <Text style={Mystyle.verificationPopupText}>Doctor: {form.doctor}</Text>
-          <Text style={Mystyle.verificationPopupText}>Specialization: {form.specialization}</Text>
-          <Text style={Mystyle.verificationPopupText}>Date: {form.date}</Text>
-          <Text style={Mystyle.verificationPopupText}>Time: {form.time}</Text>
-          <Text style={Mystyle.verificationPopupText}>Reason for Visit: {form.reason}</Text>
-          <Text style={Mystyle.verificationNoteText}>
-            NOTE: Please be advised that your appointment isn't confirmed yet. We will be in touch via phone call for final confirmation.
-          </Text>
-          <View style={Mystyle.verificationModalButtonContainer}>
-            <TouchableOpacity style={Mystyle.verificationModalButton} onPress={handleEdit}>
-              <Text style={Mystyle.verificationModalButtonText}>EDIT</Text>
-            </TouchableOpacity>
-            <TouchableOpacity style={Mystyle.verificationModalButton} onPress={handleConfirm}>
-              <Text style={Mystyle.verificationModalButtonText}>SUBMIT</Text>
-            </TouchableOpacity>
-          </View>
-        </View>
-      </Modal>
+  <View style={Mystyle.modalBackground}>
+    <View style={Mystyle.verificationPopupContainer}>
+      <Text style={Mystyle.verificationPopupTitle}>Verification</Text>
+      <Text style={Mystyle.verificationPopupText}>Name: {form.name}</Text>
+      <Text style={Mystyle.verificationPopupText}>Phone: {form.phone}</Text>
+      <Text style={Mystyle.verificationPopupText}>Birthday: {form.birthday}</Text>
+      <Text style={Mystyle.verificationPopupText}>Address: {form.address}</Text>
+      <Text style={Mystyle.verificationPopupText}>Doctor: {form.doctor}</Text>
+      <Text style={Mystyle.verificationPopupText}>Specialization: {form.specialization}</Text>
+      <Text style={Mystyle.verificationPopupText}>Date: {form.date}</Text>
+      <Text style={Mystyle.verificationPopupText}>Time: {form.time}</Text>
+      <Text style={Mystyle.verificationPopupText}>Reason for Visit: {form.reason}</Text>
+      <Text style={Mystyle.verificationNoteText}>
+        NOTE: Your appointment isn't confirmed yet. We will call you for final confirmation.
+      </Text>
+      <View style={Mystyle.verificationModalButtonContainer}>
+        <TouchableOpacity style={Mystyle.verificationModalButton} onPress={handleEdit}>
+          <Text style={Mystyle.verificationModalButtonText}>EDIT</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={Mystyle.verificationModalButton} onPress={handleConfirm}>
+          <Text style={Mystyle.verificationModalButtonText}>SUBMIT</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
+  </View>
+</Modal>
     </SafeAreaView>
   );
 };
 
 export default AppointmentForm;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

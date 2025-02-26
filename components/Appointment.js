@@ -25,6 +25,7 @@ const HomeScreen = () => {
         {/* Header with Menu Button */}
         <Appbar.Header style={Mystyle.header}>
           <Image source={require("../assets/logo.png")} style={Mystyle.logo} />
+          <Text style={{fontSize:29, color:'#001C5C', fontWeight:'bold', right:30,}}>Immacare+</Text>
           <Appbar.Action
             icon="menu"
             color="rgb(9, 10, 109)"
@@ -40,12 +41,15 @@ const HomeScreen = () => {
           <View style={Mystyle.iconContainer}>
             <TouchableOpacity style={Mystyle.contactIcon}>
               <Icon name="phone" size={24} color="white" />
+              <Text style={{color:'white', fontSize:12}}>0921-123-4212</Text>
             </TouchableOpacity>
             <TouchableOpacity style={Mystyle.contactIcon}>
               <Icon name="map-marker" size={24} color="white" />
+              <Text style={{color:'white', fontSize:12}}> 233 Doctor Pilapil St.Brgy San Miguel Pasig City</Text>
             </TouchableOpacity>
             <TouchableOpacity style={Mystyle.contactIcon}>
               <Icon name="envelope" size={24} color="white" />
+              <Text style={{color:'white', fontSize:12}}>icclinis2007@yahoo.com</Text>
             </TouchableOpacity>
           </View>
         </View>

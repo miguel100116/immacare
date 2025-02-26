@@ -5,6 +5,7 @@ import {
   TextInput,
   TouchableOpacity,
   Alert,
+  Image
 } from "react-native";
 import { MaterialIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
@@ -47,6 +48,7 @@ const Login = () => {
   return (
     <View style={Mystyle.containerLoginpage}>
       <View style={Mystyle.logoContainerLoginpage}>
+          <Image source={require("../assets/logo.png")} style={{resizeMode:'contain', height:200,width:200, backgroundColor:'#EEECDE'}} ></Image>
         <Text style={Mystyle.logoTextLoginpage}>Immacare+</Text>
       </View>
 

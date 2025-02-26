@@ -94,6 +94,19 @@ export const Mystyle = StyleSheet.create({
     backgroundColor: "#0B2447",
     padding: 15,
     borderRadius: 10,
+    backgroundColor: "#0B2447", // Dark blue background
+    borderRadius: 10,
+    width: 110, // Set a fixed width
+    height: 100, // Set a fixed height
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 10,
+    shadowColor: "#000",
+    shadowOpacity: 0.3,
+    shadowRadius: 3,
+    elevation: 5, // For Android shadow
+    right:60,
+    margin:10,
   },
 
   // BUTTONS SECTION
@@ -263,13 +276,14 @@ export const Mystyle = StyleSheet.create({
     color: 'navy'
   },
   inputSetappointment: {
-    borderWidth: 1,
-    borderColor: '#ccc',
+    borderWidth: 12,
+    borderColor: 'white',
     padding: 10,
     marginBottom: 10,
     borderRadius: 5,
     elevation:4,
-    color:"white"
+    color:'white',
+    backgroundColor:'white',
   },
   buttonSetappointment: {
     backgroundColor: 'navy',
@@ -280,6 +294,14 @@ export const Mystyle = StyleSheet.create({
   buttonTextSetappointment: {
     color: 'white',
     fontWeight: 'bold'
+  },
+  inputSetappointmentdoc: {
+    borderWidth: 1,
+    padding: 1,
+    marginBottom: 10,
+    borderRadius: 5,
+    color:'gray',
+    backgroundColor:'white',
   },
 
   //kadugtong
@@ -335,7 +357,7 @@ export const Mystyle = StyleSheet.create({
   },
   verificationPopupContainer: {
     backgroundColor: "#1e3a8a",
-    padding: 24,
+    padding:24,
     margin: 20,
     borderRadius: 20,
     alignItems: "center",
@@ -344,12 +366,13 @@ export const Mystyle = StyleSheet.create({
     shadowOffset: { width: 0, height: 4 },
     shadowOpacity: 0.3,
     shadowRadius: 10,
+    top:150,
   },
   verificationPopupTitle: {
     color: "#fff",
-    fontSize: 22,
+    fontSize: 25,
     fontWeight: "bold",
-    marginBottom: 16,
+    marginBottom: 2,
   },
   verificationPopupText: {
     color: "#fff",
@@ -381,13 +404,19 @@ export const Mystyle = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 16,
   },
+  modalBackground: {
+    flex: 1,
+    backgroundColor: "rgba(0, 0, 0, 0.5)", // Black with 50% transparency
+    justifyContent: "center",
+    alignItems: "center",
+  },
 
 
 
   //LOGIN CSS
   containerLoginpage: {
     flex: 1,
-    backgroundColor: "#EAE0C8", // Beige background
+    backgroundColor: "#EEECDE", // Beige background
     alignItems: "center",
     justifyContent: "center",
     padding: 20,
@@ -399,6 +428,7 @@ export const Mystyle = StyleSheet.create({
     fontSize: 28,
     fontWeight: "bold",
     color: "#0A214A", // Dark Blue
+    left:25,
   },
   loginTextLoginpage: {
     fontSize: 18,
@@ -439,6 +469,7 @@ export const Mystyle = StyleSheet.create({
   registerLinkLoginpage: {
     color: "#001C5C",
     fontWeight: "bold",
+    top:5,
   },
 
 
@@ -646,6 +677,8 @@ doctorsAppointmentButtonText: {
   fontWeight: 'bold',
   textAlign: 'center',
 },
+
+
 
 });
 
